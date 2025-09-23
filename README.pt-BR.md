@@ -57,10 +57,6 @@ GLM AI Configuration Tool é uma aplicação Electron moderna e intuitiva para c
 
 ## 🚀 Instalação
 
-### Versão Portátil (Recomendada)
-1. Baixe `GLM-AI-Config-1.0.0-portable.exe` da seção de releases
-2. Execute o arquivo diretamente - não requer instalação
-3. Todas as configurações são salvas na pasta do executável
 
 ### Versão com Instalador
 1. Baixe `GLM-AI-Config Setup 1.0.0.exe` da seção de releases

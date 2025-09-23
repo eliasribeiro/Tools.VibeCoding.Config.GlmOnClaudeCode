@@ -2,13 +2,25 @@
   "appId": "com.glm.ai.config",
   "productName": "GLM AI Config",
   "directories": {
-    "output": "release",
+    "output": "build-output",
     "buildResources": "assets"
   },
   "files": [
-    "build/**/*",
-    "public/electron.js",
-    "public/preload.js",
+    {
+      "from": "build",
+      "to": ".",
+      "filter": [
+        "**/*"
+      ]
+    },
+    {
+      "from": "public/electron.js",
+      "to": "electron.js"
+    },
+    {
+      "from": "public/preload.js",
+      "to": "preload.js"
+    },
     {
       "from": "node_modules",
       "filter": [
@@ -17,7 +29,7 @@
     }
   ],
   "extraMetadata": {
-    "main": "public/electron.js"
+    "main": "electron.js"
   },
   "win": {
     "target": [

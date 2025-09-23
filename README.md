@@ -26,7 +26,7 @@ GLM AI Config Tool is a modern Electron app that helps you configure and manage 
 - Claude Code or Crush CLI (depending on what you want to configure)
 
 ## 🚀 Installation
-- Portable: download “GLM-AI-Config-1.0.0-portable.exe” and run it
+
 - Installer: download “GLM-AI-Config Setup 1.0.0.exe”, run and follow the steps
 - ZIP: download “GLM-AI-Config-1.0.0-win.zip”, extract and run “GLM AI Config.exe”
 

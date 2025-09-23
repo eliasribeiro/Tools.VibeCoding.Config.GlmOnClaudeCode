@@ -52,7 +52,7 @@
     "appId": "com.glm.ai.config",
     "productName": "GLM AI Config",
     "directories": {
-      "output": "release"
+      "output": "build-output"
     },
     "files": [
       "build/**/*",
