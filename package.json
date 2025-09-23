@@ -52,16 +52,44 @@
     "appId": "com.glm.ai.config",
     "productName": "GLM AI Config",
     "directories": {
-      "output": "dist"
+      "output": "release"
     },
     "files": [
       "build/**/*",
-      "src/main/**/*",
+      "public/electron.js",
+      "public/preload.js",
       "node_modules/**/*"
     ],
+    "extraMetadata": {
+      "main": "public/electron.js"
+    },
     "win": {
-      "target": "nsis",
-      "icon": "assets/icon.ico"
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        },
+        {
+          "target": "zip",
+          "arch": ["x64"]
+        },
+        {
+          "target": "portable",
+          "arch": ["x64"]
+        }
+      ],
+      "requestedExecutionLevel": "asInvoker"
+    },
+    "portable": {
+      "artifactName": "${productName}-${version}-portable.${ext}",
+      "unicode": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "GLM AI Config"
     }
   }
 }

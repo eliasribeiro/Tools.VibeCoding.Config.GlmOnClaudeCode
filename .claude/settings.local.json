@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(copy:*)",
+      "Bash(npm run dist:*)",
+      "Bash(timeout:*)",
+      "Bash(npm run build:*)",
+      "Bash(npx electron-builder:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
