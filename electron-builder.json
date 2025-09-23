@@ -1,0 +1,52 @@
+{
+  "appId": "com.glm.ai.config",
+  "productName": "GLM AI Config",
+  "directories": {
+    "output": "dist",
+    "buildResources": "assets"
+  },
+  "files": [
+    "build/**/*",
+    "src/main/**/*",
+    {
+      "from": "node_modules",
+      "filter": [
+        "**/*"
+      ]
+    }
+  ],
+  "extraMetadata": {
+    "main": "src/main/main.js"
+  },
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64"]
+      },
+      {
+        "target": "zip",
+        "arch": ["x64"]
+      },
+      {
+        "target": "portable",
+        "arch": ["x64"]
+      }
+    ],
+    "icon": "assets/icon.ico",
+    "requestedExecutionLevel": "asInvoker"
+  },
+  "portable": {
+    "artifactName": "${productName}-${version}-portable.${ext}",
+    "unicode": false
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "GLM AI Config"
+  },
+  "publish": null,
+  "compression": "normal"
+}

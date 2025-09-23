@@ -1,0 +1,67 @@
+{
+  "name": "glm-ai-config",
+  "version": "1.0.0",
+  "description": "GLM AI Configuration Software for Claude Code and Crush",
+  "main": "src/main/main.js",
+  "homepage": "./",
+  "scripts": {
+    "start": "node scripts/dev.js",
+    "dev": "react-scripts start",
+    "build": "react-scripts build",
+    "build-app": "node scripts/build.js",
+    "electron": "electron .",
+    "electron-dev": "set ELECTRON_IS_DEV=true && electron .",
+    "dist": "npm run build && electron-builder",
+    "pack": "npm run build && electron-builder --dir",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "keywords": ["GLM", "AI", "Configuration", "Claude Code", "Crush", "Portable"],
+  "author": "GLM AI Config Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "electron": "^22.0.0",
+    "electron-builder": "^23.6.0",
+    "wait-on": "^7.0.1"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "electron-store": "^8.1.0",
+    "keytar": "^7.9.0",
+    "node-powershell": "^4.0.0",
+    "tailwindcss": "^3.2.4",
+    "@tailwindcss/forms": "^0.5.3",
+    "react-router-dom": "^6.6.1",
+    "lucide-react": "^0.294.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "build": {
+    "appId": "com.glm.ai.config",
+    "productName": "GLM AI Config",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "build/**/*",
+      "src/main/**/*",
+      "node_modules/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    }
+  }
+}
